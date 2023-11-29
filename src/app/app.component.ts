@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   wind = 0
   icon = ''
   min = 0
+  
   max = 0
   searchControl = new FormControl('');
   suggestedCities: any[] = [];
