@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class WeatherService {
   apiURL = 'https://api.openweathermap.org/data/2.5/'
   apiKey ='2e7e1d8fabd7c153330e11d1f13782d9'
-  private geoNamesUrl = 'http://api.geonames.org/searchJSON';
+  private geoNamesUrl = 'https://api.geonames.org/searchJSON';
   private username = 'flowadmin';
   constructor(private http:HttpClient) { }
 
@@ -23,8 +23,6 @@ export class WeatherService {
   }
 
   getCities(query: string) {
-
-
     return this.http.get<any>(`${this.geoNamesUrl}?name_startsWith=${query}&maxRows=10&username=flowadmin`);
   }
 

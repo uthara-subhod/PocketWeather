@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     fromEvent(this.input.nativeElement, 'keyup')
       .pipe(
         filter(Boolean),
-        debounceTime(1500),
+        debounceTime(150),
         distinctUntilChanged(),
         tap((text) => {
           if(this.input.nativeElement.value.trim()!=''){
@@ -121,7 +121,6 @@ export class AppComponent implements OnInit {
         break;
       case 'Clouds':
         url = 'https://i.makeagif.com/media/8-08-2017/U8cAor.gif';
-
         break;
       case 'Snow':
         url = 'https://i.pinimg.com/originals/7d/7c/79/7d7c79f57f2bf8fc2b43b9a5e5a2a96b.gif';
@@ -131,6 +130,9 @@ export class AppComponent implements OnInit {
         break;
       case 'Clear':
         url = 'https://i.pinimg.com/originals/80/e5/b5/80e5b5070a9a15dab79fe8d8f27378cc.gif';
+        break;
+      case 'Haze':
+        url='https://media.tenor.com/uwrDXgOernIAAAAC/aesthetic-white.gif'
         break;
     }
     return url
